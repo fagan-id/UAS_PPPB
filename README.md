@@ -22,6 +22,6 @@ The app fetches data from the following API endpoints:
 ## Picture
 Below is a preview of the application:  
 
-![App Screenshot](https://ibb.co.com/vYNLhf8)
+![App Screenshot](https://i.ibb.co.com/FVQ8Xct/Frame-5-1.png)
 
 
