@@ -16,8 +16,8 @@ Backland Coffee Shop, Sebuah Aplikasi yang digunakan untuk menampilkan menu, men
   
 ## API URL
 The app fetches data from the following API endpoints:  
-- **Base URL**: `[(https://ppbo-api.vercel.app/Xk8J1i/)]/`  
-- **Coffee Menu**: `[(https://ppbo-api.vercel.app/Xk8J1i/)]/menu`  
+- **Base URL**: ```https://ppbo-api.vercel.app/Xk8J1i/```  
+- **Coffee Menu**: ```https://ppbo-api.vercel.app/Xk8J1i/menu```  
 
 ## Picture
 Below is a preview of the application:  
