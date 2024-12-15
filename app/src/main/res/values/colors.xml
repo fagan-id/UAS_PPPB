@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#036406</color>
+    <color name="grey">#E3E3E3</color>
+    <color name="yellow">#FDCC0D</color>
+
+
+    <color name="default_chip_background">#FFFFFF</color>
+    <color name="focused_chip_background">#036406</color>
+    <color name="selected_chip_background">#036406</color>
+
+    <color name="default_chip_stroke">#036406</color>
+    <color name="focused_chip_stroke">#AAAAAA</color>
+    <color name="selected_chip_stroke">#888888</color>
+
+</resources>

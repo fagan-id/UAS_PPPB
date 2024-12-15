@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".HomeFragment">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Carousel Section -->
+            <LinearLayout
+                android:id="@+id/layout_carousel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/carouselViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginVertical="16dp" />
+            </LinearLayout>
+
+            <!-- Greeting Section -->
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Hai [User] !"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_margin="16dp"
+                />
+
+            <TextView
+                android:id="@+id/tvSubGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grab your first coffee in this morning"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                />
+
+            <!-- Recommended Section -->
+            <TextView
+                android:id="@+id/tvRecommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Recommended"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPopular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:clipToPadding="false"
+                tools:listitem="@layout/item_menu" />
+
+            <!-- Catalog Section -->
+            <TextView
+                android:id="@+id/tvCatalog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Catalog"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- Coffee Type Chips -->
+            <HorizontalScrollView
+                android:id="@+id/horizontalChips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupCoffeeTypes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        app:chipBackgroundColor="@color/selector_chip_background"
+                        app:chipStrokeColor="@color/selector_chip_stroke"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipFood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Foods"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        app:chipBackgroundColor="@color/selector_chip_background"
+                        app:chipStrokeColor="@color/selector_chip_stroke"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipDrinks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drinks"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        app:chipBackgroundColor="@color/selector_chip_background"
+                        app:chipStrokeColor="@color/selector_chip_stroke"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipDessert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dessert"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        app:chipBackgroundColor="@color/selector_chip_background"
+                        app:chipStrokeColor="@color/selector_chip_stroke"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipCoffee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coffee"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        app:chipBackgroundColor="@color/selector_chip_background"
+                        app:chipStrokeColor="@color/selector_chip_stroke"
+                        app:chipStrokeWidth="1dp" />
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOffers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:clipToPadding="false" />
+            <TextView
+                android:id="@+id/tvNoItems"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:text="No Item In This Catalog"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

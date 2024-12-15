@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_checked="true"
+        android:color="@color/selected_chip_stroke" /> <!-- Color when chip is selected -->
+    <item
+        android:state_focused="true"
+        android:color="@color/focused_chip_stroke" /> <!-- Color when chip is focused -->
+    <item
+        android:color="@color/default_chip_stroke" /> <!-- Default color -->
+</selector>
